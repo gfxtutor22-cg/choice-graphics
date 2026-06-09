@@ -575,3 +575,4 @@ document.addEventListener('keydown', (e) => {
   if (modal.classList.contains('active') && e.key === 'Escape') {
     closeServiceImage();
   }
+});
