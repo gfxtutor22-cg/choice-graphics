@@ -356,6 +356,8 @@ if (quoteForm) {
     const mobile = formData.get('mobile');
     const product = formData.get('product');
     const quantity = formData.get('quantity');
+    const fileInput = document.getElementById('artwork');
+    const hasFile = fileInput && fileInput.files.length > 0;
 
     // Build WhatsApp message
     let message = `Hello Choice Graphics!%0A%0A`;
@@ -367,9 +369,41 @@ if (quoteForm) {
     message += `Product: ${product}%0A`;
     message += `Quantity: ${quantity}%0A`;
     if (formData.get('message')) message += `Message: ${formData.get('message')}%0A`;
+    
+    // File information
+    if (hasFile) {
+      const fileName = fileInput.files[0].name;
+      const fileSize = (fileInput.files[0].size / 1024).toFixed(1);
+      message += `%0A%0A*Artwork File:* ${fileName} (${fileSize} KB)%0A`;
+      message += `_(Please send this file in the chat)_`;
+    }
 
-    // Open WhatsApp
-    window.open(`https://wa.me/918104337338?text=${message}`, '_blank');
+    // Convert file to base64 for WhatsApp (if small enough)
+    if (hasFile && fileInput.files[0].size <= 50000) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const base64 = e.target.result.split(',')[1];
+        const fileDataUrl = `data:${fileInput.files[0].type};base64,${base64}`;
+        
+        // Open WhatsApp with file info
+        window.open(`https://wa.me/918104337338?text=${message}`, '_blank');
+        
+        // Show alert to send file
+        setTimeout(() => {
+          alert(`✅ Form submitted!\n\n📎 Now please send your artwork file "${fileName}" in the WhatsApp chat that just opened.`);
+        }, 500);
+      };
+      reader.readAsDataURL(fileInput.files[0]);
+    } else {
+      // Open WhatsApp
+      window.open(`https://wa.me/918104337338?text=${message}`, '_blank');
+      
+      if (hasFile) {
+        setTimeout(() => {
+          alert(`✅ Form submitted!\n\n📎 File size is large (${(fileInput.files[0].size / 1024).toFixed(1)} KB).\n\nPlease send "${fileInput.files[0].name}" manually in the WhatsApp chat.`);
+        }, 500);
+      }
+    }
 
     // Show success state
     const submitBtn = this.querySelector('button[type="submit"]');
@@ -380,6 +414,7 @@ if (quoteForm) {
     setTimeout(() => {
       submitBtn.innerHTML = originalText;
       submitBtn.style.background = '';
+      this.reset(); // Reset form
     }, 3000);
   });
 }
