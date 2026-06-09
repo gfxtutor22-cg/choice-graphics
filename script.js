@@ -439,7 +439,7 @@ const galleryData = {
   'signboards-gallery': ['gallery/signboard1.jpg', 'gallery/signboard2.jpg', 'gallery/signboard3.jpg'],
   'gifts-gallery': ['gallery/gift1.jpg', 'gallery/gift2.jpg', 'gallery/gift3.jpg'],
   'laser-gallery': ['gallery/laser1.jpg', 'gallery/laser2.jpg', 'gallery/laser3.jpg'],
-  'stationery-gallery': ['gallery/stationery1.jpg', 'gallery/stationery2.jpg', 'gallery/stationery3.jpg'],
+  'stationery-gallery': ['gallery/stationery1.jpg', 'gallery/stationery2.jpg', 'gallery/stationery3.jpg', 'gallery/stationery4.jpg'],
   'vinyl-gallery': ['gallery/vinyl1.jpg', 'gallery/vinyl2.jpg', 'gallery/vinyl3.jpg', 'gallery/vinyl4.jpg', 'gallery/vinyl5.jpg', 'gallery/vinyl6.jpg', 'gallery/vinyl7.jpg', 'gallery/vinyl8.jpg', 'gallery/vinyl9.jpg', 'gallery/vinyl10.jpg', 'gallery/vinyl11.jpg', 'gallery/vinyl12.jpg', 'gallery/vinyl13.jpg', 'gallery/vinyl14.jpg', 'gallery/vinyl15.jpg', 'gallery/vinyl16.jpg', 'gallery/vinyl17.jpg', 'gallery/vinyl18.jpg', 'gallery/vinyl19.jpg', 'gallery/vinyl20.jpg'],  
   'event-gallery': ['gallery/event1.jpg', 'gallery/event2.jpg', 'gallery/event3.jpg']
 };
