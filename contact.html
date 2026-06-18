@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Choice Graphics</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Choice Graphics" class="logo-img" />
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="contact.html" class="nav-cta active">Get a Quote</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+            <span class="theme-icon-dark">🌙</span>
+            <span class="theme-icon-light">☀️</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Same as Home) -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" data-slide="0"><img src="gallery/slide1.png" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Premium Printing &<br /><span class="gradient-text">Custom Branding Solutions</span></h1><p class="hero-subtitle">DTF • Sublimation • UV Printing • Stickers • Laser Cutting • Corporate Gifts</p></div></div>
+      <div class="hero-slide" data-slide="1"><img src="gallery/slide2.png" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Custom T-Shirts,<br /><span class="gradient-text">Hoodies & Jerseys</span></h1><p class="hero-subtitle">DTF Printing • Sublimation • Polo T-Shirts • Caps • Sportswear</p></div></div>
+      <div class="hero-slide" data-slide="2"><img src="gallery/slide3.png" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">UV Stickers &<br /><span class="gradient-text">Product Labels</span></h1><p class="hero-subtitle">Die Cut Stickers • Branding Stickers • Waterproof • Custom Shapes</p></div></div>
+      <div class="hero-slide" data-slide="3"><img src="gallery/slide4.webp" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Customized Gifts &<br /><span class="gradient-text">Promotional Products</span></h1><p class="hero-subtitle">Mugs • Keychains • Photo Frames • Corporate Gifts • Personalized Items</p></div></div>
+      <div class="hero-slide" data-slide="4"><img src="gallery/slide5.jpg" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Laser Cutting &<br /><span class="gradient-text">UV Printing</span></h1><p class="hero-subtitle">Acrylic Products • Name Plates • Mobile Covers • Corporate Awards</p></div></div>
+    </div>
+    <div class="hero-slider-controls"><button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">&#10094;</button><div class="slider-dots" id="sliderDots"><button class="slider-dot active" data-index="0"></button><button class="slider-dot" data-index="1"></button><button class="slider-dot" data-index="2"></button><button class="slider-dot" data-index="3"></button><button class="slider-dot" data-index="4"></button></div><button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">&#10095;</button></div>
+    
+  </section>
+  <section class="page-title-section"><div class="container"><span class="section-tag">Get In Touch</span><h2 class="section-title">Get the Best Price for <span class="gradient-text">Your Requirement</span></h2><p class="section-desc">Prices provided after understanding your quantity, size, material & customization needs</p></div></section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <a href="tel:08104337338">081043 37338</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Visit Us</h4>
+              <p>109, Veena Industrial Estate, New Link Road,<br />Near Monginis Cake Factory,<br />Veera Desai Industrial Estate,<br />Andheri West, Mumbai – 400053</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><img src="wapp.png" alt="WhatsApp" style="width: 24px; height: 24px; object-fit: contain;" /></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/918104337338" target="_blank">Chat for Instant Quote</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><img src="insta.png" alt="Instagram" style="width: 24px; height: 24px; object-fit: contain;" /></div>
+            <div>
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/choicegraphics.in" target="_blank">@choicegraphics</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><img src="fb.png" alt="Facebook" style="width: 24px; height: 24px; object-fit: contain;" /></div>
+            <div>
+              <h4>Facebook</h4>
+              <a href="https://www.facebook.com/choicegraphics.in" target="_blank">Choice Graphics</a>
+            </div>
+          </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5!2d72.83391913791077!3d19.13835131437938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA4JzE4LjEiTiA3MsKwNTAnMDIuMSJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style="border:0; border-radius:16px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        <form class="contact-form" id="quoteForm">
+          <h3>Request a Quote on WhatsApp</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Your Company" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mobile">Mobile Number <span class="required">*</span></label>
+              <input type="tel" id="mobile" name="mobile" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="product">Product Required <span class="required">*</span></label>
+              <select id="product" name="product" required>
+                <option value="" disabled selected>Select a product</option>
+                <option>DTF Printing</option>
+                <option>Sublimation Printing</option>
+                <option>UV Printing</option>
+                <option>UV Stickers</option>
+                <option>Print & Cut Vinyl</option>
+                <option>Laser Cutting</option>
+                <option>Corporate Gifts</option>
+                <option>Custom T-Shirts</option>
+                <option>Caps Printing</option>
+                <option>Visiting Cards</option>
+                <option>Brochures / Flyers</option>
+                <option>ID Cards</option>
+                <option>Mugs Print</option>
+                <option>Signage / Branding</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity <span class="required">*</span></label>
+              <input type="number" id="quantity" name="quantity" placeholder="e.g. 100" min="1" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Send Your Artwork</label>
+            <div style="padding: 20px; background: rgba(108, 92, 231, 0.08); border-radius: 12px; border: 2px dashed var(--primary-light); text-align: center;">
+              <p style="margin: 0 0 12px 0; font-size: 1rem; color: var(--text-primary);">
+                <strong>Email your design/logo to:</strong>
+              </p>
+              <a href="mailto:choicegraphics21@gmail.com" style="display: inline-block; padding: 12px 24px; background: var(--primary); color: #fff; border-radius: 8px; font-size: 1.1rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease;">
+                choicegraphics21@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us more about your requirement..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Get Best Quote →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="logo.png" alt="Choice Graphics" class="logo-img" />
+          </a>
+          <p>Premium Printing & Custom Branding Solutions. From one piece to bulk orders — we print everything.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Services</h4>
+          <ul>
+            <li><a href="services.html">DTF Printing</a></li>
+            <li><a href="services.html">UV Stickers</a></li>
+            <li><a href="services.html">Corporate Gifts</a></li>
+            <li><a href="services.html">Laser Cutting</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>📞 <a href="tel:08104337338">081043 37338</a></p>
+          <p>📍 Andheri West, Mumbai</p>
+          <p><img src="wapp.png" alt="WhatsApp" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 6px;" /> <a href="https://wa.me/918104337338" target="_blank">WhatsApp Us</a></p>
+          <p><img src="insta.png" alt="Instagram" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 6px;" /> <a href="https://www.instagram.com/choicegraphics.in" target="_blank">Instagram</a></p>
+          <p><img src="fb.png" alt="Facebook" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 6px;" /> <a href="https://www.facebook.com/choicegraphics.in" target="_blank">Facebook</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Choice Graphics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Social Floating Buttons -->
+  <div class="social-floats">
+    <a href="https://wa.me/918104337338" target="_blank" class="social-float whatsapp" aria-label="Chat on WhatsApp">
+      <img src="wapp.png" alt="WhatsApp" style="width: 28px; height: 28px; object-fit: contain;" />
+    </a>
+    <a href="https://www.instagram.com/choicegraphics.in" target="_blank" class="social-float instagram" aria-label="Follow on Instagram">
+      <img src="insta.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: contain;" />
+    </a>
+    <a href="https://www.facebook.com/choicegraphics.in" target="_blank" class="social-float facebook" aria-label="Like on Facebook">
+      <img src="fb.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: contain;" />
+    </a>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Gallery Modal -->
+  <div id="galleryModal" class="gallery-modal" onclick="closeGallery(event)">
+    <button class="gallery-close" onclick="closeGallery()">&times;</button>
+    <div class="gallery-wrapper">
+      <div id="galleryThumbnails" class="gallery-thumbnails"></div>
+      <div class="gallery-content">
+        <img id="galleryImage" src="" alt="Gallery Image" />
+        <button class="gallery-nav gallery-prev" onclick="prevImage(event)">&#10094;</button>
+        <button class="gallery-nav gallery-next" onclick="nextImage(event)">&#10095;</button>
+        <div class="gallery-counter">
+          <span id="galleryCounter">1</span> / <span id="galleryTotal">3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Image Modal -->
+  <div id="serviceImageModal" class="service-image-modal" onclick="closeServiceImage(event)">
+    <button class="service-image-close" onclick="closeServiceImage(event)">&times;</button>
+    <img id="serviceImage" src="" alt="Service Image" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choice Graphics — Premium Printing & Custom Branding Solutions</title>
+  <title>About Us — Choice Graphics</title>
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,8 +22,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="industries.html">Industries</a></li>
@@ -38,123 +38,155 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Same as Home) -->
   <section class="hero" id="hero">
     <div class="hero-bg-overlay"></div>
     <div class="hero-particles" id="heroParticles"></div>
-
-    <!-- Image Slider -->
     <div class="hero-slider" id="heroSlider">
-      <div class="hero-slide active" data-slide="0">
+      <div class="hero-slide" data-slide="0">
         <img src="gallery/slide1.png" alt="Premium Printing Solutions" class="slide-image" />
         <div class="slide-overlay"></div>
         <div class="container hero-content">
-          <h1 class="hero-title">
-            Premium Printing &<br />
-            <span class="gradient-text">Custom Branding Solutions</span>
-          </h1>
+          <h1 class="hero-title">Premium Printing &<br /><span class="gradient-text">Custom Branding Solutions</span></h1>
           <p class="hero-subtitle">DTF • Sublimation • UV Printing • Stickers • Laser Cutting • Corporate Gifts</p>
         </div>
       </div>
-
-      <div class="hero-slide" data-slide="1">
+      <div class="hero-slide active" data-slide="1">
         <img src="gallery/slide2.png" alt="Custom T-Shirt Printing" class="slide-image" />
         <div class="slide-overlay"></div>
         <div class="container hero-content">
-          <h1 class="hero-title">
-            Custom T-Shirts,<br />
-            <span class="gradient-text">Hoodies & Jerseys</span>
-          </h1>
+          <h1 class="hero-title">Custom T-Shirts,<br /><span class="gradient-text">Hoodies & Jerseys</span></h1>
           <p class="hero-subtitle">DTF Printing • Sublimation • Polo T-Shirts • Caps • Sportswear</p>
         </div>
       </div>
-
       <div class="hero-slide" data-slide="2">
         <img src="gallery/slide3.png" alt="UV Stickers & Labels" class="slide-image" />
         <div class="slide-overlay"></div>
         <div class="container hero-content">
-          <h1 class="hero-title">
-            UV Stickers &<br />
-            <span class="gradient-text">Product Labels</span>
-          </h1>
+          <h1 class="hero-title">UV Stickers &<br /><span class="gradient-text">Product Labels</span></h1>
           <p class="hero-subtitle">Die Cut Stickers • Branding Stickers • Waterproof • Custom Shapes</p>
         </div>
       </div>
-
       <div class="hero-slide" data-slide="3">
         <img src="gallery/slide4.webp" alt="Corporate Gifting" class="slide-image" />
         <div class="slide-overlay"></div>
         <div class="container hero-content">
-          <h1 class="hero-title">
-            Customized Gifts &<br />
-            <span class="gradient-text">Promotional Products</span>
-          </h1>
+          <h1 class="hero-title">Customized Gifts &<br /><span class="gradient-text">Promotional Products</span></h1>
           <p class="hero-subtitle">Mugs • Keychains • Photo Frames • Corporate Gifts • Personalized Items</p>
         </div>
       </div>
-
       <div class="hero-slide" data-slide="4">
         <img src="gallery/slide5.jpg" alt="Laser Cutting & UV Printing" class="slide-image" />
         <div class="slide-overlay"></div>
         <div class="container hero-content">
-          <h1 class="hero-title">
-            Laser Cutting &<br />
-            <span class="gradient-text">UV Printing</span>
-          </h1>
+          <h1 class="hero-title">Laser Cutting &<br /><span class="gradient-text">UV Printing</span></h1>
           <p class="hero-subtitle">Acrylic Products • Name Plates • Mobile Covers • Corporate Awards</p>
         </div>
       </div>
     </div>
-
-    <!-- Slider Controls -->
     <div class="hero-slider-controls">
-      <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">❮</button>
+      <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">&#10094;</button>
       <div class="slider-dots" id="sliderDots">
-        <button class="slider-dot active" data-index="0" aria-label="Go to slide 1"></button>
-        <button class="slider-dot" data-index="1" aria-label="Go to slide 2"></button>
-        <button class="slider-dot" data-index="2" aria-label="Go to slide 3"></button>
-        <button class="slider-dot" data-index="3" aria-label="Go to slide 4"></button>
-        <button class="slider-dot" data-index="4" aria-label="Go to slide 5"></button>
+        <button class="slider-dot" data-index="0"></button>
+        <button class="slider-dot active" data-index="1"></button>
+        <button class="slider-dot" data-index="2"></button>
+        <button class="slider-dot" data-index="3"></button>
+        <button class="slider-dot" data-index="4"></button>
       </div>
-      <button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">❯</button>
+      <button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">&#10095;</button>
     </div>
 
-    <!-- CTAs & Stats -->
-    <div class="container hero-bottom">
-      <p class="hero-note">"Best Pricing Available on Request"</p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number" data-target="5000">0</span>+
-          <span class="stat-label">Happy Clients</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number" data-target="50000">0</span>+
-          <span class="stat-label">Orders Delivered</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number" data-target="100">0</span>+
-          <span class="stat-label">Product Types</span>
-        </div>
-      </div>
-    </div>
+  </section>
 
-    <div class="hero-scroll-indicator">
-      <div class="scroll-arrow"></div>
+  <!-- Page Title -->
+  <section class="page-title-section">
+    <div class="container">
+      <span class="section-tag">Who We Are</span>
+      <h2 class="section-title">About <span class="gradient-text">Choice Graphics</span></h2>
     </div>
   </section>
 
-  <!-- Home CTA Section -->
-  <section class="home-cta" style="background: var(--bg-section); padding: 80px 0;">
-    <div class="container" style="text-align: center;">
-      <div class="section-header">
-        <span class="section-tag">Welcome to Choice Graphics</span>
-        <h2 class="section-title">Your One-Stop Shop for <span class="gradient-text">Custom Printing</span></h2>
-        <p class="section-desc">From apparel to corporate gifts, we bring your brand to life with premium quality printing and branding solutions.</p>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            At Choice Graphics, we specialize in high-quality customized printing and branding solutions for businesses, schools, events, resellers, and individuals.
+          </p>
+          <p>
+            With advanced printing technologies and attention to detail, we transform your ideas into professionally printed products that make a lasting impression.
+          </p>
+        </div>
+        <div class="about-features">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div>
+              <h4>Fast Turnaround</h4>
+              <p>Quick production without compromising quality</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <div>
+              <h4>Premium Quality Prints</h4>
+              <p>Vibrant colors and sharp details every time</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div>
+              <h4>Custom Designs Available</h4>
+              <p>Tailored designs to match your vision</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <div>
+              <h4>Bulk & Retail Orders</h4>
+              <p>From one piece to thousands — we handle it all</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚚</div>
+            <div>
+              <h4>Pan India Shipping</h4>
+              <p>Delivering across India reliably</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
-        <a href="services.html" class="btn btn-primary">Explore Services</a>
-        <a href="portfolio.html" class="btn btn-outline">View Portfolio</a>
-        <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose" id="whychoose">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Promise</span>
+        <h2 class="section-title">Why Choose <span class="gradient-text">Us?</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">💎</div>
+          <h3>Quality That Speaks</h3>
+          <p>We use modern printing technology and premium materials to deliver vibrant colors, sharp details, and durable results.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h3>Customized Solutions</h3>
+          <p>Every project is tailored according to your requirement, quantity, and branding needs.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📦</div>
+          <h3>Bulk Order Specialists</h3>
+          <p>From small quantities to large production runs, we can handle orders of every size.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3>Reliable Support</h3>
+          <p>Our team assists you from design approval to final delivery.</p>
+        </div>
       </div>
     </div>
   </section>

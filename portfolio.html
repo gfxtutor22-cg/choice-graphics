@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Gallery — Choice Graphics</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Choice Graphics" class="logo-img" />
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+            <span class="theme-icon-dark">🌙</span>
+            <span class="theme-icon-light">☀️</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Same as Home) -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide" data-slide="0"><img src="gallery/slide1.png" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Premium Printing &<br /><span class="gradient-text">Custom Branding Solutions</span></h1><p class="hero-subtitle">DTF • Sublimation • UV Printing • Stickers • Laser Cutting • Corporate Gifts</p></div></div>
+      <div class="hero-slide" data-slide="1"><img src="gallery/slide2.png" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Custom T-Shirts,<br /><span class="gradient-text">Hoodies & Jerseys</span></h1><p class="hero-subtitle">DTF Printing • Sublimation • Polo T-Shirts • Caps • Sportswear</p></div></div>
+      <div class="hero-slide" data-slide="2"><img src="gallery/slide3.png" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">UV Stickers &<br /><span class="gradient-text">Product Labels</span></h1><p class="hero-subtitle">Die Cut Stickers • Branding Stickers • Waterproof • Custom Shapes</p></div></div>
+      <div class="hero-slide active" data-slide="3"><img src="gallery/slide4.webp" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Customized Gifts &<br /><span class="gradient-text">Promotional Products</span></h1><p class="hero-subtitle">Mugs • Keychains • Photo Frames • Corporate Gifts • Personalized Items</p></div></div>
+      <div class="hero-slide" data-slide="4"><img src="gallery/slide5.jpg" alt="" class="slide-image" /><div class="slide-overlay"></div><div class="container hero-content"><h1 class="hero-title">Laser Cutting &<br /><span class="gradient-text">UV Printing</span></h1><p class="hero-subtitle">Acrylic Products • Name Plates • Mobile Covers • Corporate Awards</p></div></div>
+    </div>
+    <div class="hero-slider-controls"><button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">&#10094;</button><div class="slider-dots" id="sliderDots"><button class="slider-dot" data-index="0"></button><button class="slider-dot" data-index="1"></button><button class="slider-dot" data-index="2"></button><button class="slider-dot active" data-index="3"></button><button class="slider-dot" data-index="4"></button></div><button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">&#10095;</button></div>
+    
+  </section>
+  <section class="page-title-section"><div class="container"><span class="section-tag">Our Work</span><h2 class="section-title">Portfolio <span class="gradient-text">Gallery</span></h2><p class="section-desc">A glimpse of what we create every day</p></div></section>
+
+  <!-- Portfolio Gallery Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="portfolio-grid">
+        <div class="portfolio-card large" onclick="openGallery('tshirt-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 280px;">
+            <img src="gallery\tshirt1.jpg" alt="DTF T-Shirt 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery\tshirt2.jpg" alt="DTF T-Shirt 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery\tshirt3.jpg" alt="DTF T-Shirt 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>DTF T-Shirts</h4>
+            <span>Apparel Printing</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('caps-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 280px;">
+            <img src="gallery/cap1.webp" alt="Custom Cap 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/cap2.webp" alt="Custom Cap 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/cap3.webp" alt="Custom Cap 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Custom Caps</h4>
+            <span>Apparel Printing</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('uv-products-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 280px;">
+            <img src="gallery/uv1.jpg" alt="UV Product 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/uv2.jpg" alt="UV Product 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/uv3.jpg" alt="UV Product 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>UV Printed Products</h4>
+            <span>UV Printing</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('uv-stickers-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 300px;">
+            <img src="gallery/sticker1.jpg" alt="UV Sticker 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/sticker2.jpg" alt="UV Sticker 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/sticker3.jpg" alt="UV Sticker 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>UV Stickers</h4>
+            <span>Sticker Printing</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card large" onclick="openGallery('signboards-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 300px;">
+            <img src="gallery/signboard1.jpg" alt="Sign Board 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/signboard2.jpg" alt="Sign Board 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/signboard3.jpg" alt="Sign Board 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Acrylic Sign Boards</h4>
+            <span>Signage & Branding</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('gifts-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 300px;">
+            <img src="gallery/gift1.jpg" alt="Corporate Gift 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/gift2.jpg" alt="Corporate Gift 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/gift3.jpg" alt="Corporate Gift 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Corporate Gifts</h4>
+            <span>Customized Gifts</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('laser-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 260px;">
+            <img src="gallery/laser1.jpg" alt="Laser Product 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/laser2.jpg" alt="Laser Product 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/laser3.jpg" alt="Laser Product 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Laser Cut Products</h4>
+            <span>Laser Cutting</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('stationery-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 260px;">
+            <img src="gallery/stationery1.jpg" alt="Stationery 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/stationery2.jpg" alt="Stationery 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/stationery3.jpg" alt="Stationery 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Stationery Printing</h4>
+            <span>Commercial Printing</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('vinyl-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 260px;">
+            <img src="gallery/vinyl1.jpg" alt="Vinyl Branding 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/vinyl2.jpg" alt="Vinyl Branding 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/vinyl3.jpg" alt="Vinyl Branding 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Vinyl Branding</h4>
+            <span>Signage & Branding</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card" onclick="openGallery('event-gallery')" style="cursor: pointer;">
+          <div class="portfolio-slideshow" style="position: relative; overflow: hidden; height: 260px;">
+            <img src="gallery/event1.jpg" alt="Event Merchandise 1" class="slide-img active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/event2.jpg" alt="Event Merchandise 2" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+            <img src="gallery/event3.jpg" alt="Event Merchandise 3" class="slide-img" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease-in-out;" />
+          </div>
+          <div class="portfolio-info">
+            <h4>Event Merchandise</h4>
+            <span>Custom Merchandise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="logo.png" alt="Choice Graphics" class="logo-img" />
+          </a>
+          <p>Premium Printing & Custom Branding Solutions. From one piece to bulk orders — we print everything.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Services</h4>
+          <ul>
+            <li><a href="services.html">DTF Printing</a></li>
+            <li><a href="services.html">UV Stickers</a></li>
+            <li><a href="services.html">Corporate Gifts</a></li>
+            <li><a href="services.html">Laser Cutting</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>📞 <a href="tel:08104337338">081043 37338</a></p>
+          <p>📍 Andheri West, Mumbai</p>
+          <p><img src="wapp.png" alt="WhatsApp" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 6px;" /> <a href="https://wa.me/918104337338" target="_blank">WhatsApp Us</a></p>
+          <p><img src="insta.png" alt="Instagram" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 6px;" /> <a href="https://www.instagram.com/choicegraphics.in" target="_blank">Instagram</a></p>
+          <p><img src="fb.png" alt="Facebook" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 6px;" /> <a href="https://www.facebook.com/choicegraphics.in" target="_blank">Facebook</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Choice Graphics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Social Floating Buttons -->
+  <div class="social-floats">
+    <a href="https://wa.me/918104337338" target="_blank" class="social-float whatsapp" aria-label="Chat on WhatsApp">
+      <img src="wapp.png" alt="WhatsApp" style="width: 28px; height: 28px; object-fit: contain;" />
+    </a>
+    <a href="https://www.instagram.com/choicegraphics.in" target="_blank" class="social-float instagram" aria-label="Follow on Instagram">
+      <img src="insta.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: contain;" />
+    </a>
+    <a href="https://www.facebook.com/choicegraphics.in" target="_blank" class="social-float facebook" aria-label="Like on Facebook">
+      <img src="fb.png" alt="Facebook" style="width: 28px; height: 28px; object-fit: contain;" />
+    </a>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Gallery Modal -->
+  <div id="galleryModal" class="gallery-modal" onclick="closeGallery(event)">
+    <button class="gallery-close" onclick="closeGallery()">&times;</button>
+    <div class="gallery-wrapper">
+      <div id="galleryThumbnails" class="gallery-thumbnails"></div>
+      <div class="gallery-content">
+        <img id="galleryImage" src="" alt="Gallery Image" />
+        <button class="gallery-nav gallery-prev" onclick="prevImage(event)">&#10094;</button>
+        <button class="gallery-nav gallery-next" onclick="nextImage(event)">&#10095;</button>
+        <div class="gallery-counter">
+          <span id="galleryCounter">1</span> / <span id="galleryTotal">3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Image Modal -->
+  <div id="serviceImageModal" class="service-image-modal" onclick="closeServiceImage(event)">
+    <button class="service-image-close" onclick="closeServiceImage(event)">&times;</button>
+    <img id="serviceImage" src="" alt="Service Image" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

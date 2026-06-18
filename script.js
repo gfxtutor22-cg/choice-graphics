@@ -43,108 +43,51 @@ let slideInterval = null;
 const SLIDE_DURATION = 5000; // 5 seconds per slide
 
 function goToSlide(index) {
-  // Remove active from all slides and dots
+  if (slides.length === 0) return;
   slides.forEach(s => s.classList.remove('active'));
   dots.forEach(d => d.classList.remove('active'));
-
-  // Handle wrapping
   currentSlide = ((index % slides.length) + slides.length) % slides.length;
-
-  // Activate current
   slides[currentSlide].classList.add('active');
   dots[currentSlide].classList.add('active');
-
-  // Restart the CSS progress bar animation
   dots[currentSlide].style.animation = 'none';
-  void dots[currentSlide].offsetWidth; // trigger reflow
+  void dots[currentSlide].offsetWidth;
   dots[currentSlide].style.animation = '';
 }
 
-function nextSlide() {
-  goToSlide(currentSlide + 1);
-}
+function nextSlide() { goToSlide(currentSlide + 1); }
+function prevSlide() { goToSlide(currentSlide - 1); }
+function startAutoPlay() { stopAutoPlay(); slideInterval = setInterval(nextSlide, SLIDE_DURATION); }
+function stopAutoPlay() { if (slideInterval) { clearInterval(slideInterval); slideInterval = null; } }
+function resetAutoPlay() { stopAutoPlay(); startAutoPlay(); }
 
-function prevSlide() {
-  goToSlide(currentSlide - 1);
-}
+if (nextBtn) { nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); }); }
+if (prevBtn) { prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); }); }
 
-function startAutoPlay() {
-  stopAutoPlay();
-  slideInterval = setInterval(nextSlide, SLIDE_DURATION);
-}
-
-function stopAutoPlay() {
-  if (slideInterval) {
-    clearInterval(slideInterval);
-    slideInterval = null;
-  }
-}
-
-function resetAutoPlay() {
-  stopAutoPlay();
-  startAutoPlay();
-}
-
-// Arrow buttons
-if (nextBtn) {
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoPlay();
-  });
-}
-if (prevBtn) {
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoPlay();
-  });
-}
-
-// Dot navigation
 dots.forEach(dot => {
   dot.addEventListener('click', () => {
-    const index = parseInt(dot.getAttribute('data-index'));
-    goToSlide(index);
+    goToSlide(parseInt(dot.getAttribute('data-index')));
     resetAutoPlay();
   });
 });
 
-// Touch/swipe support for mobile
-let touchStartX = 0;
-let touchEndX = 0;
-
+let touchStartX = 0, touchEndX = 0;
 if (heroSlider) {
-  heroSlider.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
+  heroSlider.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
   heroSlider.addEventListener('touchend', (e) => {
     touchEndX = e.changedTouches[0].screenX;
     const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
-      resetAutoPlay();
-    }
+    if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); resetAutoPlay(); }
   }, { passive: true });
-}
-
-// Pause on hover (desktop)
-if (heroSlider) {
   heroSlider.addEventListener('mouseenter', stopAutoPlay);
   heroSlider.addEventListener('mouseleave', startAutoPlay);
 }
 
-// Keyboard navigation
 document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') { prevSlide(); resetAutoPlay(); }
   if (e.key === 'ArrowRight') { nextSlide(); resetAutoPlay(); }
 });
 
-// Start auto-play
-startAutoPlay();
+if (slides.length > 0) startAutoPlay();
 
 // ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.getElementById('navbar');
@@ -287,9 +230,12 @@ function setupRevealAnimations() {
 setupRevealAnimations();
 
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+// Only applies to same-page #anchors (multi-page links handled by browser natively)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = 80;
@@ -420,26 +366,7 @@ if (quoteForm) {
 }
 
 // ===== NAVBAR ACTIVE STATE =====
-const sections = document.querySelectorAll('section[id]');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY + 100;
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute('id');
-
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${sectionId}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-  });
-});
+// Active state is set via HTML class on each page (no scroll-based detection needed for multi-page)
 
 // ===== TILT EFFECT ON CARDS =====
 function addTiltEffect() {

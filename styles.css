@@ -792,6 +792,60 @@ img { max-width: 100%; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ===== PAGE HERO (Inner Pages) ===== */
+.page-hero {
+  padding: 140px 0 60px;
+  background: radial-gradient(ellipse at 20% 50%, rgba(108, 92, 231, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+              var(--bg-dark);
+  text-align: center;
+}
+
+.page-hero .section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.page-hero .section-desc {
+  max-width: 650px;
+}
+
+[data-theme="light"] .page-hero {
+  background: radial-gradient(ellipse at 20% 50%, rgba(108, 92, 231, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%),
+              var(--bg-dark);
+}
+
+/* ===== NAVBAR Z-INDEX FIX ===== */
+.navbar:not(.scrolled) {
+  z-index: 100;
+}
+
+/* ===== PAGE TITLE SECTION (below hero on inner pages) ===== */
+.page-title-section {
+  padding: 60px 0 20px;
+  text-align: center;
+  background: var(--bg-section);
+}
+
+.page-title-section .section-title {
+  margin-bottom: 8px;
+}
+
+.page-title-section .section-desc {
+  max-width: 650px;
+}
+
+/* ===== NAV ACTIVE STATE ===== */
+.nav-links a.active {
+  color: #fff;
+  background: rgba(108, 92, 231, 0.15);
+}
+
+.nav-cta.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+}
+
 /* ===== SECTION COMMON ===== */
 section {
   padding: 100px 0;
