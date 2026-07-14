@@ -395,7 +395,7 @@ addTiltEffect();
 // ===== GALLERY MODAL =====
 const galleryData = {
   'tshirt-gallery': ['gallery/tshirt1.jpg', 'gallery/tshirt2.jpg', 'gallery/tshirt3.jpg'],
-  'caps-gallery': ['gallery/cap1.webp', 'gallery/cap2.webp', 'gallery/cap3.webp'],
+  'caps-gallery': ['gallery/cap1.webp', 'gallery/cap2.png', 'gallery/cap3.webp'],
   'uv-products-gallery': ['gallery/uv1.jpg', 'gallery/uv2.jpg', 'gallery/uv3.jpg'],
   'uv-stickers-gallery': ['gallery/sticker1.jpg', 'gallery/sticker2.jpg', 'gallery/sticker3.jpg'],
   'signboards-gallery': ['gallery/signboard1.jpg', 'gallery/signboard2.jpg', 'gallery/signboard3.jpg'],

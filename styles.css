@@ -955,6 +955,16 @@ section {
   color: var(--text-muted);
 }
 
+.about-text ul {
+  padding-left: 20px;
+  margin: 16px 0;
+}
+
+.about-text li {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
 /* ===== SERVICES ===== */
 .services {
   background: var(--bg-dark);
